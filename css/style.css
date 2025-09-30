@@ -134,8 +134,27 @@ section h2 {
 .contact-form h2 { margin-top: 0; }
 .contact-form p { color: #cbd5e1; }
 .contact-form label { display:block; margin-top: 0.8em; color: #cbd5e1; font-size: 0.9em; }
-.contact-form input,
-.contact-form textarea { width: 100%; margin-top: 0.4em; padding: 0.6em; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); color: #f0f0f0; }
+.contact-form input {
+    width: 100%;
+    margin-top: 0.4em;
+    padding: 0.6em;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+    color: #f0f0f0;
+}
+.contact-form textarea {
+    width: 100%;
+    margin-top: 0.4em;
+    padding: 0.6em;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+    color: #f0f0f0;
+    resize: none; /* prevent user from resizing */
+    height: 160px; /* fixed size */
+    overflow: auto;
+}
 .form-actions { margin-top: 1em; display:flex; align-items:center; gap:1em; }
 .form-status { color: #9ae6b4; font-weight:600; }
 .contact-info { text-align:center; padding: 0.5em; }
@@ -148,5 +167,5 @@ section h2 {
 
 @media (max-width: 880px) {
     .contact-card { grid-template-columns: 1fr; }
-    .contact-info { order: -1; }
+    /* Keep the natural document order on small screens so the form stays above contact info */
 }
