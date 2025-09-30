@@ -18,5 +18,8 @@ Usage
 - POST /posts/:id/comments         -> add a comment to post
 - DELETE /posts/:postId/comments/:commentId  -> delete comment (admin)
 
+
+
+
 Notes
 - This server uses file-based storage (posts.json) and is intended for small personal sites and demos only.
