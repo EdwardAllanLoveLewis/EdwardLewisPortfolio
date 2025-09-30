@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/resume.html">Resume</a></li>
+        <li><a href="/pages/projects.html">Projects</a></li>
+        <li><a class="active" href="/pages/blog.html">Blog</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-wrap">
+      <div class="contact-card">
+        <div class="contact-form">
+          <h2>Blog</h2>
+          <p class="muted">Welcome to the blog. Posts are stored locally in your browser. This is a simple, static client-side blog for demos and personal notes.</p>
+          <div id="posts" style="margin-top:1em;"></div>
+        </div>
+
+        <aside class="contact-info">
+          <div class="card">
+            <h3>Create a new post</h3>
+            <label>Title</label>
+            <input id="postTitle" placeholder="Post title">
+            <label style="margin-top:.6em;">Message</label>
+            <textarea id="postMessage" rows="6" placeholder="Write your post here..."></textarea>
+            <div style="margin-top:0.8em; display:flex; gap:0.6em;">
+              <button id="createPost" class="cta">Create Post</button>
+              <button id="clearPosts" class="cta" style="background:#cc4444;">Clear All Posts</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/blog.js" defer></script>
+</body>
+</html>

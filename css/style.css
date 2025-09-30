@@ -153,6 +153,45 @@ h1 {
 .chip { background: rgba(255,255,255,0.03); color:#e6eef8; padding:0.35em 0.6em; border-radius:999px; font-size:0.9em; }
 .contact-cta { text-align:center; margin-top:1.5em; }
 
+/* Blog specific refinements */
+#posts .card { padding: 1em; margin-bottom: 1em; background: rgba(255,255,255,0.025); }
+#posts .card strong { font-size: 1.1em; display:block; }
+.comment, .reply { background: rgba(255,255,255,0.015); padding: 0.6em; border-radius: 8px; margin-bottom: 0.6em; }
+.comment .muted, .reply .muted { color: #9aa7b8; }
+.comments { margin-top: 0.8em; }
+.new-comment { flex: 1; padding: 0.45em; border-radius:6px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color: #f0f0f0; }
+
+/* Slight hover lift for cards */
+.card:hover { transform: translateY(-4px); transition: transform 180ms ease; }
+
+/* Inputs in aside (new-post card) */
+.contact-info input, .contact-info textarea { width: 100%; margin-top: 0.4em; padding: 0.6em; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); color: #f0f0f0; }
+
+/* Ensure the new-post textarea in the aside can't be resized and stays a consistent height */
+.contact-info textarea { 
+    resize: none; 
+    height: 200px; /* a little taller */
+    width: 90%; /* not full width */
+    max-width: 300px;
+    margin: 0.4em auto 0; /* center inside the aside */
+    display: block;
+    overflow: auto;
+}
+
+/* Make the title input match the textarea's narrower, centered style */
+.contact-info input#postTitle {
+    width: 90%;
+    max-width: 300px;
+    margin: 0.4em auto 0;
+    display: block;
+}
+
+/* Small responsive tweak */
+@media (max-width: 880px) {
+    #posts { margin-top: 0.4em; }
+    .contact-info { order: 2; }
+}
+
 @media (max-width: 980px) {
     .about-hero { flex-direction: column; text-align: center; }
     .about-grid { grid-template-columns: 1fr; }
