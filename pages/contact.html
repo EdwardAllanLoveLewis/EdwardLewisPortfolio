@@ -15,13 +15,48 @@
     </header>
 <header><h1>Contact</h1></header>
 <main>
-<form>
-    <input type="text" name="name" placeholder="Name">
-    <input type="email" name="email" placeholder="Email">
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-</form>
-<p>Connect with me: <a href="www.linkedin.com/in/edwardlewismech">LinkedIn</a> | <a href="https://github.com/EdwardAllanLoveLewis">GitHub</a> | <a href="mailto:edwardallanlovelewis@gmail.com">Email</a></p>
+    <section class="contact-wrap">
+        <div class="contact-card">
+            <div class="contact-form">
+                <h2>Get in touch</h2>
+                <p>I'm open to internship opportunities and collaboration. Send a message and I'll respond as soon as I can.</p>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell me about the role or question..." required></textarea>
+
+                    <div class="form-actions">
+                        <button class="cta" type="submit">Send Message</button>
+                        <div id="formStatus" class="form-status" aria-live="polite"></div>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="contact-info">
+                <img src="../images/Headshot.png" alt="Headshot" class="headshot">
+                <h3>Edward Lewis</h3>
+                <p>Mechanical Engineering & Science (Physics) — University of Sydney</p>
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/edwardlewismech" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/EdwardAllanLoveLewis" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:edwardallanlovelewis@gmail.com">Email</a>
+                </div>
+
+                <div class="quick-info">
+                    <p><strong>Location:</strong> Sydney, NSW</p>
+                    <p><strong>Availability:</strong> Internship / Part-time</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
 </main>
 </body>
 </html>

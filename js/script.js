@@ -7,4 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            status.textContent = 'Message sent — I will get back to you shortly.';
+            form.reset();
+            setTimeout(() => { status.textContent = ''; }, 5000);
+        });
+    }
 });

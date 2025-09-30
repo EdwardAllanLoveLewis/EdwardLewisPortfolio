@@ -85,3 +85,68 @@ section h2 {
         max-width: 900px;
     }
 }
+
+/* Resume topbar and download button */
+.resume-topbar {
+    max-width: 900px;
+    margin: 1em auto 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1em;
+}
+.resume-topbar .download {
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    color: #fff;
+    padding: 0.5em 0.9em;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.resume-topbar .download:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+    .resume-topbar { padding: 0 0.5em; }
+    .resume-topbar .download { padding: 0.45em 0.7em; font-size: 0.9em; }
+}
+
+/* Contact page styles */
+.contact-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em 4em;
+}
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2em;
+    align-items: start;
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.contact-form h2 { margin-top: 0; }
+.contact-form p { color: #cbd5e1; }
+.contact-form label { display:block; margin-top: 0.8em; color: #cbd5e1; font-size: 0.9em; }
+.contact-form input,
+.contact-form textarea { width: 100%; margin-top: 0.4em; padding: 0.6em; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); color: #f0f0f0; }
+.form-actions { margin-top: 1em; display:flex; align-items:center; gap:1em; }
+.form-status { color: #9ae6b4; font-weight:600; }
+.contact-info { text-align:center; padding: 0.5em; }
+.contact-info .headshot { width:120px; height:120px; object-fit:cover; margin-bottom:0.5em; }
+.contact-info h3 { margin:0.25em 0; }
+.social { display:flex; gap:0.6em; justify-content:center; margin:0.5em 0; }
+.social a { color:#cbd5e1; text-decoration:none; padding:0.4em 0.6em; border-radius:6px; background: rgba(255,255,255,0.01); }
+.social a:hover { background: rgba(0,119,204,0.08); color:#fff; }
+.quick-info { color:#cbd5e1; font-size:0.95em; margin-top:0.6em; }
+
+@media (max-width: 880px) {
+    .contact-card { grid-template-columns: 1fr; }
+    .contact-info { order: -1; }
+}
