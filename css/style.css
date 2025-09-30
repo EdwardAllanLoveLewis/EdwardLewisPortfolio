@@ -36,12 +36,18 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Timeline styles for Work Experience */
 .timeline {
     position: relative;
-    margin: 2em 1em;
+    margin: 1.5em auto; /* center the timeline block */
+    max-width: 900px;
     padding-left: 1.5em;
     border-left: 2px solid rgba(255,255,255,0.08);
+}
+.section-heading,
+section h2 {
+    text-align: center;
+    margin: 0.75em 0 0.5em;
+    color: #ffffff;
 }
 .timeline-item {
     position: relative;
