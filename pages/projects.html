@@ -14,12 +14,89 @@
             </ul>
         </nav>
     </header>
+</header>
 <header><h1>Projects</h1></header>
 <main>
-<div class="project-gallery">
-    <div class="project-card">Project 1</div>
-    <div class="project-card">Project 2</div>
-</div>
+    <section class="project-entry card wide">
+        <div class="project-grid">
+            <div class="gallery">
+                <div class="main-image" id="mainImageWrap">
+                    <img id="mainImage" src="../images/steam-1.svg" alt="Model steam engine - main photo">
+                    <button class="view-gallery" id="openGallery">View photos</button>
+                </div>
+                <div class="thumbs" id="thumbRow">
+                    <img class="thumb" data-index="0" src="../images/steam-1.svg" alt="Photo 1">
+                    <img class="thumb" data-index="1" src="../images/steam-2.svg" alt="Photo 2">
+                    <img class="thumb" data-index="2" src="../images/steam-3.svg" alt="Photo 3">
+                </div>
+            </div>
+
+            <div class="project-meta">
+                <h2 class="project-title">Model Steam Engine</h2>
+                <p class="muted project-sub">Built for Design and Construction of Mechanical Systems class — The University of Sydney</p>
+                <p class="lead">A precision scale model steam engine designed, machined and assembled as part of a course project. The project demonstrates machining techniques, bearing and valve design, steam cycle understanding and assembly tolerances. Below are photos from the build and links to the technical report and lab notes.</p>
+
+                <ul class="project-highlights">
+                    <li><strong>Year:</strong> 2025</li>
+                    <li><strong>Material:</strong> Brass, mild steel, and bright mild steel</li>
+                    <li><strong>Techniques:</strong> Lathe turning, milling, tapping, drill press, hand tools</li>
+                    <li><strong>Key learning:</strong> Valve timing, steam sealing, machining techniques, design</li>
+                </ul>
+
+                <div class="project-actions">
+                    <a class="cta" href="../assets/resume_placeholder.pdf" target="_blank" rel="noopener">Download report (PDF)</a>
+                    <a class="cta" href="../assets/resume_placeholder.pdf" target="_blank" rel="noopener">Download SolidWorks Files</a>
+                    <button class="cta outline" id="openGalleryBtn">Open photo gallery</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div id="projectLightbox" class="lightbox" aria-hidden="true">
+        <button class="lb-close" id="lbClose" aria-label="Close gallery">×</button>
+        <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+        <div class="lb-inner">
+            <img id="lbImage" src="" alt="">
+            <div class="lb-caption" id="lbCaption"></div>
+        </div>
+        <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+    </div>
+
+    <section class="project-entry card wide">
+        <div class="project-grid">
+            <div class="gallery">
+                <div class="main-image" id="mainImageWrap">
+                    <img id="mainImage" src="../images/steam-1.svg" alt="Model steam engine - main photo">
+                    <button class="view-gallery" id="openGallery">View photos</button>
+                </div>
+                <div class="thumbs" id="thumbRow">
+                    <img class="thumb" data-index="0" src="../images/steam-1.svg" alt="Photo 1">
+                    <img class="thumb" data-index="1" src="../images/steam-2.svg" alt="Photo 2">
+                    <img class="thumb" data-index="2" src="../images/steam-3.svg" alt="Photo 3">
+                </div>
+            </div>
+
+            <div class="project-meta">
+                <h2 class="project-title">Wine Quality Machine Learning Project</h2>
+                <p class="muted project-sub">Built for Multi-disciplinary Engineering class — The University of Sydney</p>
+                <p class="lead">A machine learning model, which would interprate data of the chjaracteristics of wine, such as acidity, alcohol and other inputs. As well as the location the grapes were grown and fermented to fist output the quality of the wine and hence the price.</p>
+
+                <ul class="project-highlights">
+                    <li><strong>Year:</strong> 2025</li>
+                    <li><strong>Key learning:</strong> Machine Learning models, Regression vs Classification, Supervised vs Unsupervised learning</li>
+                </ul>
+
+                <div class="project-actions">
+                    <a class="cta" href="../assets/resume_placeholder.pdf" target="_blank" rel="noopener">Download report (PDF)</a>
+                    <a class="cta" href="../assets/resume_placeholder.pdf" target="_blank" rel="noopener">Download Python Files</a>
+                    <button class="cta outline" id="openGalleryBtn">Open photo gallery</button>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<script src="../js/projects.js"></script>
 </body>
 </html>
