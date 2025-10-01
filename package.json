@@ -1,11 +1,4 @@
 {
-  "name": "edward-portfolio",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node server/index.js",
-    "server-install": "cd server && npm install"
-  },
   "dependencies": {
     "express": "^5.1.0"
   }

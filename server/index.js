@@ -93,26 +93,5 @@ app.delete('/posts/:postId/comments/:commentId', requireAdmin, (req, res) => {
   res.json({ deleted: ok ? 1 : 0 });
 });
 
-const PORT = parseInt(process.env.PORT, 10) || 4000;
-
-function startServer(port, attemptsLeft = 10) {
-  const server = app.listen(port, () => console.log(`Blog server listening on http://localhost:${port}`));
-  server.on('error', (err) => {
-    if (err && err.code === 'EADDRINUSE') {
-      console.warn(`Port ${port} in use`);
-      if (attemptsLeft > 0) {
-        const nextPort = port + 1;
-        console.log(`Trying port ${nextPort}... (${attemptsLeft - 1} attempts left)`);
-        setTimeout(() => startServer(nextPort, attemptsLeft - 1), 200);
-      } else {
-        console.error('No available ports found, exiting.');
-        process.exit(1);
-      }
-    } else {
-      console.error('Server error:', err);
-      process.exit(1);
-    }
-  });
-}
-
-startServer(PORT);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Blog server listening on ${PORT}`));
